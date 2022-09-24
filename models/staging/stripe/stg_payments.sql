@@ -2,6 +2,6 @@ select
     orderid
     ,paymentmethod
     ,status
-    ,amount
+    ,amount / 100 as amount
     ,created
 from raw.stripe.payment

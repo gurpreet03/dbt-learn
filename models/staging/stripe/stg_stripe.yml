@@ -1,0 +1,18 @@
+version: 2
+
+models:
+    - name: stg_payments
+      description: Staged payments data for Stripe.
+      columns:
+        - name: payment_id
+          description: Primary key of the payments.
+        - name: order_id
+          description: id of the order for which the payment was made.
+        - name: payment_method
+          description: id of the order for which the payment was made.
+        - name: status
+          description: "{{ doc('payment_status') }}"
+        - name: amount
+          description: The amont that was paid.
+        - name: created_at
+          description: The date at which the payment was initiated.
